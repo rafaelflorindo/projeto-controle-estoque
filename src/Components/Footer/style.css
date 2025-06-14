@@ -1,0 +1,90 @@
+footer {
+  background-color: #2f2f2f;
+  color: #dcdcdc;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  border-top: 2px solid #444;
+  gap: 15px;
+}
+
+.footerNavegation ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+}
+
+.footerNavegation ul li {
+  position: relative;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.footerNavegation ul li::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #aaaaaa;
+  transition: width 0.3s ease;
+}
+
+.footerNavegation ul li:hover::after {
+  width: 100%;
+}
+
+.footerSocials {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footerSocials a {
+  color: #bfbfbf;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.footerSocials a:hover {
+  color: #ffffff;
+}
+
+.footerCredits {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+/* Links da navegação do rodapé */
+.footerNavegation ul li a {
+  color: #bfbfbf;            /* cinza claro padrão */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerNavegation ul li a:hover {
+  color: #ffffff;            /* branco puro no hover */
+}
+
+/* Links das redes sociais */
+.footerSocials a {
+  color: #bfbfbf;            /* mesma cor dos links acima */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerSocials a:hover {
+  color: #ffffff;
+}

@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Projeto Controle de Estoque
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![GitHub repo size](https://img.shields.io/github/repo-size/rafaelflorindo/projetopessoal?color=blue)](https://github.com/rafaelflorindo/projetopessoal)
+[![GitHub stars](https://img.shields.io/github/stars/rafaelflorindo/projetopessoal?style=social)](https://github.com/rafaelflorindo/projetopessoal/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/rafaelflorindo/projetopessoal?style=social)](https://github.com/rafaelflorindo/projetopessoal/network)
+[![License](https://img.shields.io/github/license/rafaelflorindo/projetopessoal)](https://github.com/rafaelflorindo/projetopessoal/blob/main/LICENSE)
+[![Last Commit](https://img.shields.io/github/last-commit/rafaelflorindo/projetopessoal)](https://github.com/rafaelflorindo/projetopessoal/commits/main)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/import?s=https://github.com/rafaelflorindo/projetopessoal)
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+Este repositório reúne projetos desenvolvidos de forma independente com foco em aprendizado, prática de tecnologias e demonstração de habilidades em desenvolvimento de software.
 
-### `npm start`
+## 🌐 Projeto em Produção
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Você pode acessar o projeto hospedado na Vercel através do link abaixo:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+🔗 [projetopessoal-kohl.vercel.app](https://projetopessoal-kohl.vercel.app/)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## 🧠 Objetivo
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Criar um portfólio pessoal com aplicações práticas desenvolvidas nas áreas de desenvolvimento web, mobile e backend, utilizando tecnologias modernas.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🛠️ Tecnologias Utilizadas
 
-### `npm run eject`
+As tecnologias utilizadas nos projetos podem variar, mas incluem:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **React** – Criação de interfaces modernas e responsivas
+- **React Native** – Aplicações móveis híbridas
+- **Node.js** – Backend com JavaScript
+- **Express** – Criação de APIs REST
+- **Java** – Desenvolvimento desktop e fundamentos da programação
+- **HTML/CSS/JS** – Estruturação e estilização de páginas web
+- **MySQL** – Banco de dados relacional
+- **Git e GitHub** – Versionamento de código e colaboração
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 📁 Estrutura do Repositório
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+projetopessoal/
+├── backend/             # Projetos com Node.js e APIs
+├── frontend/            # Aplicações React
+├── mobile/              # Projetos com React Native
+├── java/                # Projetos em Java (Desktop / POO)
+└── README.md
+```
+Cada pasta contém um projeto separado, com seu próprio README de instruções e tecnologias específicas.
 
-## Learn More
+## 🚀 Como Executar
+Acesse a pasta do projeto desejado e siga as instruções específicas contidas no README de cada projeto.
+npm install react-router-dom
+Exemplo para projeto Node.js:
+bash
+Copiar
+Editar
+cd backend/nome-do-projeto
+npm install
+npm start
+📌 Status
+📍 Em constante evolução! Projetos são adicionados conforme avanço nos estudos e prática com diferentes tecnologias.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🤝 Contribuição
+Este é um repositório pessoal, mas feedbacks e sugestões são bem-vindos. Caso tenha alguma ideia ou melhoria, fique à vontade para abrir uma issue ou um pull request.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+📬 Contato
+GitHub: @rafaelflorindo
 
-### Code Splitting
+Email: rafaelflorindo@gmail.com
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📎 Nota: Este repositório é utilizado também como apoio às aulas e práticas realizadas com alunos, além de servir como vitrine de aprendizado contínuo.

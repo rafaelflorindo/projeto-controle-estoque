@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+
+import React from "react";
+import { BrowserRouter as Router, Route, Routes, Navigate, useLocation } from "react-router-dom";
+
+/*importação de componentes da estrutura. */
+import Header from './Components/Header';
+import Menu from './Components/Menu';
+import Footer from './Components/Footer';
+import Home from './Pages/Home';
+
+/*importação de componente da aplicação*/
+import CadastroUsuario from './Components/Usuario/Cadastrar';
+import Auth from './Components/Usuario/Auth';
+import ListarUsuario from './Components/Usuario/Listar'; 
+import EditarUsuario from './Components/Usuario/Editar';
+
+function AppContent() {
+  const location = useLocation();
+  const estaNaPaginaLogin = location.pathname === '/auth';
+  const usuario = localStorage.getItem("usuario");
+
+  return (
+    <div className="App">
+      {!estaNaPaginaLogin && <Header />}
+      {!estaNaPaginaLogin && <Menu />}
+      <Routes>
+        <Route path="/" element={usuario ? <Home /> : <Navigate to="/auth" />} />
+        <Route path="/cadastroUsuario" element={<CadastroUsuario />} />
+        <Route path="/editarUsuario" element={<EditarUsuario />} />
+        <Route path="/editarUsuario/id/:id" element={<EditarUsuario />} />
+        <Route path="/listarUsuarios" element={<ListarUsuario />} />
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
+      {!estaNaPaginaLogin && <Footer />}
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <AppContent />
+    </Router>
+
   );
 }
 
