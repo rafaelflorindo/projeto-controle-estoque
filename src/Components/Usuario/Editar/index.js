@@ -5,7 +5,6 @@ import ListarUsuario from '../Listar';
 
 const EditarUsuario = () => {
     const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
     const [telefone, setTelefone] = useState('');
     const [mensagem, setMensagem] = useState('');
     const [dadosEnviar, setDadosEnviar] = useState('');
@@ -26,10 +25,9 @@ const EditarUsuario = () => {
             const dados = await resposta.json();
             if (!resposta.ok) throw new Error(dados.error || "Erro ao atualizar");
             console.log(dados.permissao)
-            setNome(dados.nome)
-            setEmail(dados.email)
-            setTelefone(dados.telefone)
-            setPermissao(dados.permissao)
+            setNome(dados.data.nome)
+            setTelefone(dados.data.telefone)
+            setPermissao(dados.data.permissao)
         } catch (error) {
             console.log(error);
         }
@@ -40,16 +38,16 @@ const EditarUsuario = () => {
 
     const enviarFormulario = async (e) => {
         e.preventDefault();
-        if (!nome || !email || !telefone || !permissao) {
+        if (!nome || !telefone || !permissao) {
             alert("Todos os campos são de preenchimento Obrigatório");
             return
         }
-        const dados = { nome, email, telefone, permissao };
+        const dados = { nome, telefone, permissao };
         setDadosEnviar(dados)
 
         try {
             const tokenLogin = localStorage.getItem('token');
-            console.log(tokenLogin)
+           // console.log("Token ativo: "+tokenLogin)
             const response = await fetch(`http://localhost:5000/usuarios/update/${id}`, {
                 method: 'PUT',
                 headers: { 'Content-Type': 'application/json' },
@@ -76,7 +74,6 @@ const EditarUsuario = () => {
         }, 2000);
         // Limpar campos após envio
         setNome('');
-        setEmail('');
         setTelefone('');
     };
 
@@ -87,10 +84,6 @@ const EditarUsuario = () => {
                 <div>
                     <label>Nome:</label><br />
                     <input type="text" value={nome} onChange={(e) => setNome(e.target.value)} required />
-                </div>
-                <div>
-                    <label>Email:</label><br />
-                    <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 </div>
                 <div>
                     <label>Telefone/WhatsApp:</label><br />
