@@ -1,124 +1,78 @@
-/* index.css do listar.js */
-.pagina {
-  padding: 2rem;
+/*index.css do listar.js*/
+.usuarios {
   width: 100%;
-  max-width: 1300px;
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  margin: 0 auto; 
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
-  color: #2c3e50;
-}
-
-.pagina > div > button {
-  padding: 0.5rem 1rem;
-  background-color: #3498db;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  margin-bottom: 1rem; 
-  cursor: pointer;
-  transition: background-color 0.3s;
-    display: inline-block;
-}
-
-.pagina > div > button:hover {
-  background-color: #2980b9;
-}
-
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  background-color: white;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
-  border-radius: 8px; 
-  overflow: hidden; 
-}
-
-table th,
-table td {
-  padding: 0.75rem;
-  text-align: left;
-  border: 1px solid #ddd;
-}
-
-table th {
-  background-color: #f1f1f1;
-  font-weight: bold;
-}
-
-tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-
-th:nth-child(5),
-td:nth-child(5),
-.ativo {
-  text-align: center;
-}
-
-
-.icone-botao {
-  background: none; 
-  border: none; 
-  cursor: pointer;
-  padding: 0; 
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  line-height: 1; 
-}
-
-.icone-botao:focus {
-  outline: none; 
-}
-
-.icone-botao:hover {
-  opacity: 0.8; 
-}
-
-
-.icone-botao svg {
-    transition: transform 0.2s ease-in-out; 
-}
-.icone-botao:hover svg {
-  transform: scale(1.2);
-}
-
-
-.acao-icones {
-  display: flex;
-
-  align-items: center; /* Alinha os ícones verticalmente no centro */
-  justify-content: start; /* Alinha o grupo de ícones à esquerda dentro da célula */
-  height: 100%; /* Garante que o contêiner flex ocupa toda a altura da célula para alinhamento vertical */
-  margin-left: 0; /* Garante que não há margem extra à esquerda */
-  padding-left: 0; /* Garante que não há padding extra à esquerda */
-}
-
-
-td button {
-    background: none; /* Garante que o botão dentro da célula não tenha background */
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+ 
+  h2 {
+    text-align: left;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+ 
+  button {
+    padding: 0.5rem 1rem;
+    width: 250px;
+    background-color: #3498db;
+    color: white;
     border: none;
-    padding: 0;
-}
-td button:hover {
-    background: none; /* Garante que o hover não adicione background */
-}
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+ 
+  button:hover {
+    background-color: #2980b9;
+  }
+ 
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+  }
+ 
+  table th,
+  table td {
+    padding: 0.75rem;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+ 
+  table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+  }
+ 
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+ 
+  td:last-child {
+    color: #2980b9;
+    cursor: pointer;
+  }
 
-/* Se o fundo azul ainda persistir para o toggle ON,
-   pode ser que o FaToggleOn esteja gerando um elemento SVG com um fundo padrão.
-   Nesse caso, talvez seja necessário inspecionar o elemento no navegador e
-   aplicar CSS diretamente ao SVG ou ao caminho dentro dele. */
+  .img{
+    width: 35px;
+    height: 35px;
+  }
 
-/* Exemplo (se for necessário, mas tente as outras soluções primeiro): */
-/* .icone-botao svg path {
-    fill: currentColor; /* Usa a cor do elemento pai */
-/* } */
+.usuario-contador {
+    font-size: 1em; 
+    color: #555; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    padding: 0; 
+    background-color: transparent; 
+    border: none; 
+    font-weight: 600;
+}
+.alinhaCentral{
+   text-align: center;
+} 

@@ -34,7 +34,7 @@ const CadastroUsuario = () => {
         setMensagem("Usuário cadastrado com sucesso!!!")
         try{
             const tokenLogin = localStorage.getItem('token');
-            const response = await fetch('http://localhost:50   00/usuarios/create/', {
+            const response = await fetch('http://localhost:5000/usuarios/create/', {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify(dados)
@@ -56,7 +56,6 @@ const CadastroUsuario = () => {
         setTimeout(() => {
             navigate('/listarUsuarios');
         }, 2000);
-
         // Limpar campos após envio
         setNome('');
         setEmail('');

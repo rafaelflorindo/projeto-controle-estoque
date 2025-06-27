@@ -6,13 +6,12 @@ const Footer = () => {
         <footer>
             <div className="footerNavegation">
                 <ul>
-                    <li><Link to="/">Início</Link></li>
-                    <li><Link to="/sobre-mim">Sobre Mim</Link></li>
-                    <li><Link to="/disciplinas">Disciplinas</Link></li>
-                    <li><Link to="/projetos">Projetos</Link></li>
-                    <li><Link to="/publicacoes">Publicações</Link></li>
-                    <li><Link to="/material-didatico">Material Didático</Link></li>
-                    <li><Link to="/contato">Contato</Link></li>
+                   <li><Link to="/">Início</Link></li>
+        <li><Link to="/listarUsuarios">Usuários</Link></li>
+        <li><Link to="/">Produtos</Link></li>
+        <li><Link to="/">Estoque</Link></li>
+        <li><Link to="/">Relatórios</Link></li>
+        <li><Link to="/">Ajuda</Link></li>
                 </ul>
             </div>
 
