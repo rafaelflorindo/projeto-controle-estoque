@@ -14,6 +14,7 @@ import CadastroUsuario from './Components/Usuario/Cadastrar';
 import Auth from './Components/Usuario/Auth';
 import ListarUsuario from './Components/Usuario/Listar'; 
 import EditarUsuario from './Components/Usuario/Editar';
+import VisualizarUsuario from './Components/Usuario/VisualizarUsuario'
 
 function AppContent() {
   const location = useLocation();
@@ -30,6 +31,8 @@ function AppContent() {
         <Route path="/editarUsuario" element={<EditarUsuario />} />
         <Route path="/editarUsuario/id/:id" element={<EditarUsuario />} />
         <Route path="/listarUsuarios" element={<ListarUsuario />} />
+        <Route path="/visualizarUsuario/id/:id" element={<VisualizarUsuario  />} />
+        
         <Route path="/auth" element={<Auth />} />
       </Routes>
       {!estaNaPaginaLogin && <Footer />}

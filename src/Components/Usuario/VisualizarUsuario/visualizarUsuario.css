@@ -1,0 +1,158 @@
+/* Container principal da tela de visualização */
+.visualizar-usuario-container {
+    width: 100%;
+    max-width: 800px; /* Largura máxima do card de visualização */
+    margin: 40px auto; /* Centraliza o card na página */
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho da tela de visualização (botão Voltar e título) */
+.visualizar-usuario-header {
+    display: flex;
+    justify-content: space-between; /* Espaça o botão e o título */
+    align-items: center; /* Alinha verticalmente */
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee; /* Linha separadora */
+    padding-bottom: 15px;
+}
+
+.visualizar-usuario-header h2 {
+    margin: 0; /* Remove margin padrão do h2 */
+    color: #2c3e50;
+    font-size: 1.8em;
+}
+
+/* Estilos para o botão "Voltar" */
+.btn-voltar {
+    padding: 6px 12px; /* Reduzido para um botão menor */
+    background-color: #6c757d; /* Cor cinza */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex; /* Para alinhar o ícone e o texto */
+    align-items: center; /* Alinha verticalmente ícone e texto */
+    font-size: 0.85em; /* Fonte um pouco menor */
+    transition: background-color 0.3s;
+    min-width: 80px; /* Garante uma largura mínima */
+    width: 150px;
+    justify-content: center; /* Centraliza o conteúdo dentro do botão */
+    height: 40px;
+}
+
+.btn-voltar:hover {
+    background-color: #5a6268;
+}
+
+/* Estilos para o ícone dentro do botão "Voltar" (se necessário ajustar o tamanho do SVG) */
+.btn-voltar svg {
+    /* font-size: 0.9em; */ /* Descomente e ajuste se o ícone parecer muito grande */
+    margin-right: 5px; /* Espaço entre ícone e texto */
+}
+
+/* Conteúdo principal: foto do usuário e detalhes */
+.visualizar-usuario-content {
+    display: flex;
+    flex-direction: column; /* Empilha foto e detalhes em telas pequenas */
+    align-items: center; /* Centraliza itens na coluna */
+    gap: 30px; /* Espaço entre a foto e os detalhes */
+    margin-bottom: 30px;
+}
+
+/* Media query para layout lado a lado em telas maiores */
+@media (min-width: 768px) {
+    .visualizar-usuario-content {
+        flex-direction: row; /* Lado a lado em telas maiores */
+        align-items: flex-start; /* Alinha no topo quando lado a lado */
+    }
+}
+
+/* Container da foto do usuário */
+.usuario-foto-container {
+    flex-shrink: 0; /* Impede que a imagem encolha em layouts flex */
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Torna a imagem redonda */
+    overflow: hidden; /* Corta partes da imagem que ultrapassam o container redondo */
+    border: 3px solid #3498db; /* Borda azul ao redor da foto */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a imagem em si */
+.usuario-foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o container sem distorcer */
+}
+
+/* Container dos detalhes do usuário (nome, email, etc.) */
+.usuario-detalhes {
+    flex-grow: 1; /* Permite que os detalhes ocupem o espaço restante */
+    background-color: #f9f9f9; /* Fundo levemente cinza */
+    padding: 20px;
+    border-radius: 8px;
+    width: 100%; /* Ocupa a largura total disponível */
+}
+
+.usuario-detalhes p {
+    margin-bottom: 10px;
+    font-size: 1.05em;
+    color: #333;
+    line-height: 1.5;
+}
+
+.usuario-detalhes p:last-child {
+    margin-bottom: 0; /* Remove margin do último parágrafo */
+}
+
+/* Estilos para os rótulos em negrito (Nome:, Email:, etc.) */
+.usuario-detalhes strong {
+    color: #555;
+    display: inline-block; /* Permite definir largura mínima */
+    min-width: 120px; /* Ajuda a alinhar os dois pontos (:) */
+}
+
+/* Seção de ações (botão Editar) */
+.visualizar-usuario-actions {
+    text-align: right; /* Alinha o botão de editar à direita */
+    padding-top: 20px;
+    border-top: 1px solid #eee; /* Linha separadora */
+}
+
+/* Estilos para o botão "Editar Usuário" */
+.btn-editar {
+    padding: 8px 16px; /* Reduzido para um botão menor */
+    background-color: #28a745; /* Cor verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex; /* Para alinhar o ícone e o texto */
+    align-items: center; /* Alinha verticalmente ícone e texto */
+    font-size: 0.9em; /* Fonte um pouco menor */
+    transition: background-color 0.3s, transform 0.2s;
+    min-width: 140px; /* Garante uma largura mínima */
+    justify-content: center; /* Centraliza o conteúdo dentro do botão */
+    height: 40px;
+}
+
+.btn-editar:hover {
+    background-color: #218838;
+    transform: scale(1.02);
+}
+
+/* Estilos para o ícone dentro do botão "Editar Usuário" (se necessário ajustar o tamanho do SVG) */
+.btn-editar svg {
+    /* font-size: 0.9em; */ /* Descomente e ajuste se o ícone parecer muito grande */
+    margin-right: 5px; /* Espaço entre ícone e texto */
+}
+
+/* Estilo para mensagens de erro */
+.erro-mensagem {
+    color: #dc3545; /* Vermelho */
+    font-weight: bold;
+    text-align: center;
+}
